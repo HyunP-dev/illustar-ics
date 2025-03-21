@@ -9,8 +9,9 @@ import requests
 
 def main():
     print("Generating ics file as output/illustar.ics")
-    if not os.path.exists("output"):
-        os.mkdir("output")
+    path = "docs"
+    if not os.path.exists(path):
+        os.mkdir(path)
     cal = vobject.iCalendar()
     
     concert_res = requests.get("https://api.illustar.net/v1/concert?row_per_page=30&page=1&keyword=")
@@ -30,7 +31,7 @@ def main():
         vevent.add('dtstart').value = datetime.fromisoformat(event["start_date"])
         vevent.add('dtend').value = datetime.fromisoformat(event["end_date"])
 
-    with open("docs/illustar.ics", "wb") as f:
+    with open(os.path.join(path, "illustar.ics"), "wb") as f:
         f.write(cal.serialize().encode("utf-8"))
 
     print("Success")
