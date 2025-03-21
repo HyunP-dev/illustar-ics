@@ -8,7 +8,7 @@ import requests
 
 
 def main():
-    print("Generating ics file as output/illustar.ics)
+    print("Generating ics file as output/illustar.ics")
     if not os.path.exists("output"):
         os.mkdir("output")
     cal = vobject.iCalendar()
