@@ -27,7 +27,8 @@ jobs:
           pip install vobject requests
 
       - name: Run Python script
-        run: python save.py
+        run: |
+          python save.py
 
       - name: Commit and push changes
         if: steps.changed-files.outputs.files_changed == 'true'
