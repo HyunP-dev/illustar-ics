@@ -30,9 +30,11 @@ def main():
         vevent.add('dtstart').value = datetime.fromisoformat(event["start_date"])
         vevent.add('dtend').value = datetime.fromisoformat(event["end_date"])
 
-    with open("output/illustar.ics", "wb") as f:
+    with open("docs/illustar.ics", "wb") as f:
         f.write(cal.serialize().encode("utf-8"))
 
-    cal.prettyPrint()
+    print("Success")
 
-main()
+
+if __name__ == "__main__":
+    main()
