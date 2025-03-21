@@ -1,0 +1,19 @@
+[project]
+name = "illustar-ics"
+version = "0.1.0"
+description = "일러스타페스 행사 정보 구독형 캘린더"
+authors = [
+    {name = "Hyun Park",email = "hyunp.dev@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "vobject (>=0.9.9,<0.10.0)",
+    "fastapi[standard] (>=0.115.11,<0.116.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
