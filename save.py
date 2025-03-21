@@ -32,6 +32,8 @@ def main():
     with open("output/illustar.ics", "wb") as f:
         f.write(cal.serialize().encode("utf-8"))
 
+    cal.prettyPrint()
+
 
 if __name__ == "__main__":
     main()
