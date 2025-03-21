@@ -30,8 +30,7 @@ jobs:
         run: |
           python -u save.py
 
-      - name: Commit and push changes
-        if: steps.changed-files.outputs.files_changed == 'true'
+      - name: Commit and push illustar.ics
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
