@@ -31,7 +31,6 @@ jobs:
           python -u save.py
 
       - name: Commit and push illustar.ics
-        if: steps.changed-files.outputs.files_changed == 'true'
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
