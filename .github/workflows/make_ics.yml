@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Python script
         run: |
-          python save.py
+          python -u save.py
 
       - name: Commit and push changes
         if: steps.changed-files.outputs.files_changed == 'true'
