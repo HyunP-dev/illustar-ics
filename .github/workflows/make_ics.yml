@@ -2,7 +2,7 @@ name: Make .ics file to host
 
 on:
   schedule:
-    - cron: '0 */24 * * *' # 24마다 시간 실행
+    - cron: '0 */24 * * *'
   workflow_dispatch:
 
 jobs:
